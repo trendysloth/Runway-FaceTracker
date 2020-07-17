@@ -18,7 +18,6 @@ framework: tensorflow
 # gpu: False.
 spec:
     cpu: True
-    gpu: True
 files:
     # All files in the root project directory will be copied to the Docker image
     # automatically. Builds that require excessive storage can fail or take a
@@ -35,5 +34,5 @@ build_steps:
     - pip install -r requirements.txt
     # The if_gpu and if_cpu directives can be used to run build steps
     # conditionally depending on the build environment.
-    - if_gpu: echo "Building in a GPU environment..."
+    # - if_gpu: echo "Building in a GPU environment..."
     - if_cpu: echo "Building in a CPU only environment..."
