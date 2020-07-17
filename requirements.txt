@@ -1,5 +1,4 @@
 runway-python
-cmake
-dlib
 Pillow==6.0.0
+dlib
 face_recognition
