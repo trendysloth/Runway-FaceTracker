@@ -30,13 +30,7 @@ files:
 # The build_steps array allows you to run shell commands at build time. Each
 # Each build step is executed in the order it appears in the array.
 build_steps:
-    - apt-get -y update
-    - apt-get -y install cmake
     - pip install -r requirements.txt
-    - git clone https://github.com/davisking/dlib.git
-    - cd dlib
-    - python setup.py install --yes USE_NEON_INSTRUCTIONS
-    - cd ..
     # The if_gpu and if_cpu directives can be used to run build steps
     # conditionally depending on the build environment.
     - if_gpu: echo "Building in a GPU environment..."
